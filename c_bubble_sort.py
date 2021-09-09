@@ -19,10 +19,16 @@ def bubbleSort(LIST):
                 TEMP = LIST [j]
                 LIST[j] = LIST[j + 1]
                 LIST[j + 1] = TEMP
-        print(LIST)
 
-
-NUMBERS = getRandomList(10)
-print(NUMBERS)
-bubbleSort(NUMBERS)
-print(NUMBERS)
+if __name__ == "__main__":
+    TIMES = []
+    for i in range(30):
+        NUMBERS = getRandomList(10000)
+        #print(NUMBERS)
+        START = getTime()
+        bubbleSort(NUMBERS)
+        END = getTime()
+        #print(NUMBERS)
+        TIMES.append(END-START)
+        print(i)
+    print(getAverage(TIMES))
