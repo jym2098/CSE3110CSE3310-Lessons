@@ -88,3 +88,62 @@ Insertion Sort splits the list into two sections: sorted and unsorted. As it pro
 | 1 | 3 | 5 | 11 | _17_ | __19__ | 7 | 13 |
 | 1 | 3 | 5 | _7_ | 11 | 17 | __19__ | 13 |
 | 1 | 3 | 5 | 7 | 11 | _13_ | 17 | __19__ |
+
+* Insertion sort should be faster than selection sort; however, not to the same degree as bubble sort. 
+* For IB, you will need to identify, explain, and compare and contrast various iterative sorts. 
+
+## Recursive Algorithms
+A __Recursive Algorithm__ calls itself with smaller or simpler input values. Recursive algorithms have a base case, which receives the simples input values. This base stops the recursive portion of the algorithm. When inputs into a recursive algorithm are more complex the base case, a subprocess simplifies the input and returns the new simplified input into the algorithms to process again. 
+
+All iterative algorithms can be written recursively and vice versa; however, certain functions are easier to write in one form over another. 
+
+### Example 1: Testing for the correct input data
+```python
+# Recursive
+
+def chkInt(VALUE):
+    try:
+        VALUE = int(VALUE)
+        return VALUE
+    except ValueError:
+        print("You did not enter a number")
+        NEW_VALUE = input('Enter a nmber: ')
+        return chkInt(NEW_VALUE) # recursive return
+
+# Iterative
+
+def chkInt2(VALUE):
+    IS_INTEGER = False
+    while not IS_INTEGER:
+        try:
+            VALUE = int(VALUE)
+            IS_INTEGER = True
+        except BalueError:
+            print("You did npot enter a number")
+            VALUE = input("Enter a number: ")
+    return VALUE
+```
+### Iteratives vs. Recursion*
+
+In general, iterative algorithms require more lines of code and more variables than recursive algorithms. They rely on while and for loops to complete the process. Whereas, recursive algorithms do not use as many lines and rely on returns updated values into the same function. Recursion can use more physical memory than interactive algorithms because each instance of the recursive function stays in memory until the base case is reached. Finally, exclusively iterative functions tend to be faster than exclusively recursive functions. However, hybrid iterative and recursive algorithms are fastest. 
+
+### Example 2: Factorials
+
+#### Calculate 7:
+7! = 7 * 6 * 5 * 4 * 3 * 2 * 1 * 1 = 5040
+
+BUT!!!!
+
+6! = 6 * 5 * 4 * 3 * 2 * 1 * 1
+
+Therefore, we can rewrite 7! as
+
+7 * 6! = 7 * (6 * 5 * 4 * 3 * 2 * 1 * 1)
+
+Extending this principle,
+
+7! = 7 * (6 * (5 * (4 * (3 * (2 * (1 * (1)))))))
+
+which then can be generatlized into
+
+f(x) = x * (f(x01)), x >= 0
