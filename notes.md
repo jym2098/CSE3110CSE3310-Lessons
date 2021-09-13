@@ -147,3 +147,19 @@ Extending this principle,
 which then can be generatlized into
 
 f(x) = x * (f(x01)), x >= 0
+
+## Recursive Sorting
+
+Recursive sorting uses both recursive and iterative processes. In general, these hybrid sorts are exponentially faster with longer lists. (They are usually measured in a logarithmic scale).
+
+### Merge Sort
+Merge sort follows a divide and conquer method of sorting, where the array is split into its base length and then rebuilt by combining progressively larger sorted lists together. The recursive portion is the act of splitting the list and iterative process is the merging of the two smaller lists together.
+
+Oftentimes, this function is separated into splitting and merging functions. 
+
+
+
+
+
+
+
