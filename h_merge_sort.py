@@ -58,7 +58,7 @@ def mergeSort(LIST):
 
 if __name__ == "__main__":
     TIMES = []
-    for i in range(1):
+    for i in range(30):
         NUMBERS = getRandomList(10000)
         START = getTime()
         mergeSort(NUMBERS)
