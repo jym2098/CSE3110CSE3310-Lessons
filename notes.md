@@ -157,6 +157,35 @@ Merge sort follows a divide and conquer method of sorting, where the array is sp
 
 Oftentimes, this function is separated into splitting and merging functions. 
 
+### Quick Sort
+Quick sort (or quicksort) is another divide and conquer method of sorting. Quicksort utilizes an arbitrary value as its pivot, which is then used to place the pivot value in the correct place in the array. It does this by placing all smaller values to the left of the pivot and all larger values to the right of the pivot. Then it places the pivot value where the smaller and larger portions intersect and moves to the next value. It then recurs through the algorithm until the inputted list is one value long. 
+
+NOTE: Quicksorts efficiency is from separating the list into two sections that will never compare values with each other again. 
+
+### Heap Sort
+
+Heap sort uses a binary tree organization of an array to sort higher values to the top of the tree. The process of moving larger values higher in the binary tree is called __heapifying__ (or heapify).
+
+To build the binary tree, each index (starting at 0) will have a left child and right child value (hence binary tree). The index values can be calculated from the following:
+
+```python
+left_child = 2 * parentIndex + 1
+right_child = 2 * parentIndex + 2
+
+# Sample Tree
+LIST = [5, 17, 13, 11, 1, 7, 3]
+       5[0]
+       /   \
+    17[1]  13[2]
+    /  \     /  \
+11[3]  1[4] 7[5] 3[6]
+```
+
+#### Heapify
+To heapify the binary tree, the value of the parent index must be higher than the two children. Therefore, the process starts at the bottom of the tree and works its way to the top. If the parent is smaller than one of the children values, it swaps the child and parent values. As heapifying moves throughout the tree, the higher values will progressively get to the top.
+
+When the heapifying process reaches the top, the top value is removed from the tree (and placed at the end of the array) and the value from the highest index (at the bottom of the tree) replaces its position at the top. Then the heapifying process begins again. 
+
 
 
 
