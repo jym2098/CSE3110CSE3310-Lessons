@@ -186,6 +186,84 @@ To heapify the binary tree, the value of the parent index must be higher than th
 
 When the heapifying process reaches the top, the top value is removed from the tree (and placed at the end of the array) and the value from the highest index (at the bottom of the tree) replaces its position at the top. Then the heapifying process begins again. 
 
+## Big O Notation
+Programs have varying levels of efficiency. Big O notation is a means of expressing how efficient an algorithm is in comparison to other algorithms within the same context. The __complexity__ of an algorithm is measured in the amount of time, space, and inputs required to run the algorithm. How long it takes for a program to run is called its __run time__. When measuring efficiency, there is the best case, the worst case, and the average case.
+
+There are many factors that affect run time:
+* hardware specifications
+* type of data structure
+* programming language (complied vs. interpreted)
+* competence of the programmer
+* complexity of the algorithm
+* size of the input
+
+Generally, the complexity of the algorithm and the size of input affects the run time the most. 
+
+Big O notation is the efficiency measurement of the __principle activity__ as the main time measurement. It simplifies activities within the algorithms to the most intensive components. _Big O notation relates the complexity of the algorithm to the size of the input._
+
+### Pigeon Data Transfer Example
+Pigeon Transfer Time: 0(1)
+Internet Protocol: 0(N) "N is the size of the data"
+
+### Algorithm examples of efficiency
+
+```python
+for i in range(len(LIST)):
+    print(i)
+
+# Big O Notation: O(N) Linear relationship
+```
+
+```python
+for i in range(len(LIST)):
+    for j in range(len(LIST)):
+        print(i,j)
+
+# Big O Notation: O(N * N) or O(N^2) Quadratic Relationship
+
+```
+### Examples of Big O Notation
+
+| Notation | Type | Examples | Description |
+| --- | --- | --- | --- |
+| O(1) | Constant | Hash Table Access | Remain constant regardless of the size of the data set |
+| O(log n) | Logarithmic | Binary Search | Increase by a constant. If N doubles, the time to perform increases by a constant, smaller than N amount |
+| O(<N) | Sublinear | Search using parallel processing | Performs less than linear and more than logarithmic levels |
+| O(N) | Linear | Linear Search | Increase in proportion to N. If N doubles, the time to perform also doubles |
+| O( N * log N) | NlogN | quick sort, and merge sort | Increases at a multiple of a constant |
+| O(N^2) | Quadratic | bubble sort | Increases in proportion to N * N |
+| O(c^N) | Exponential | Traveling salesman problem | Increases based on the exponent N of a constant c |
+| O(n!) | Factorial | Traveling salesman problems using brute force | Increases in proportion to the product of all numbers included |
+
+### Rules for Calculating O notation
+1. Different steps get added together
+2. Drop constants in front ot N
+```python
+for i in range(len(LIST)):
+    print(i + 1)
+for i in range(len(LIST)):
+    print(i + 2)
+   
+# O (N + N --> O(2N)
+for i in range(len(LIST)):
+print(i + 1)
+print(i + 2)
+
+# O(N)
+```
+
+3. Different Inputs use different variables
+```python
+for i in range(len(LIST1)):
+    print(i)
+for i in range(len(LIST2)):
+    print(i)
+
+# O(N + M)
+```
+4. Drop non-dominant terms
+
+
 
 
 
