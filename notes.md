@@ -1,7 +1,7 @@
 # CSE3110/CSE3310 - Iterative and Recursive Algorithm Lessons
 
 ## CSE3310 Iterative Algorithms
-Iterative Algorithms use loops to process arge sets of data.
+Iterative Algorithms use loops to process large sets of data.
 
 ## Linear Search
 
